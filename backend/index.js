@@ -9,7 +9,7 @@ var cors = require("cors");
 
 app.use(
   cors({
-    origin: "http://localhost:3000", // or an array of allowed origins
+    origin: "https://inotebook-frontend-three.vercel.app", // or an array of allowed origins
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true, // include credentials like cookies
   })
