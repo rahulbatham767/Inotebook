@@ -3,7 +3,6 @@ import { useContext } from "react";
 import { AiFillDelete } from "react-icons/ai";
 import { AiFillEdit } from "react-icons/ai";
 import noteContext from "../../Context/Notes/NoteContext";
-import "./note.css";
 
 const NoteItem = (props) => {
   const { note, updateNote } = props;

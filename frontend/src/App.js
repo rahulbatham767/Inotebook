@@ -24,9 +24,9 @@ const App = () => {
     backgroundColor: toogle ? "white" : "black",
     color: toogle ? "black" : "white",
   };
+
   const mode = () => {
     setLight(light === "dark" ? "light" : "dark");
-
     settoogle(!toogle);
     const toogleChange = document.querySelector(".toggle .button");
     const labelChange = document.querySelector(".toggle .label");
@@ -34,7 +34,7 @@ const App = () => {
     const formContainer = document.querySelectorAll(".form-container");
     const formsubmitbtn = document.querySelector(".form-submit-btn");
     const card = document.querySelector(".card");
-    console.log(card);
+
     if (formContainer) {
       console.log("formContainer");
       if (toogle) {

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Link, useLocation, useNavigate, NavLink } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useLocation, useNavigate, NavLink } from "react-router-dom";
 
 const Navbar = ({ toogle, light, mode }) => {
   const navigate = useNavigate();

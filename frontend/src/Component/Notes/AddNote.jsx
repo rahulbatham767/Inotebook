@@ -1,6 +1,5 @@
 import React, { useState, useContext } from "react";
 import noteContext from "../../Context/Notes/NoteContext";
-import "../style.css"; // Make sure to import your existing styles
 
 const AddNote = () => {
   const context = useContext(noteContext);

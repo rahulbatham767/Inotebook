@@ -1,7 +1,6 @@
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import noteContext from "../../Context/Notes/NoteContext";
-import "../style.css"; // Import your CSS file
 
 const Signup = () => {
   const [auth, setAuth] = useState({
