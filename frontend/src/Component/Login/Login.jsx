@@ -8,9 +8,8 @@ const Login = () => {
   const context = useContext(noteContext);
   const { showAlert } = context;
   const domain =
-    process.env.DOMAIN ||
-    "https://inotebook-backend-r4syf0r9l-taruns-projects-2b38c76b.vercel.app";
-  console.log(process.env.REACT_APP_FOO);
+    process.env.DOMAIN || "https://inotebook-backend-seven.vercel.app";
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 

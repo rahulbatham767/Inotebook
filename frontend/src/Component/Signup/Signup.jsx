@@ -13,8 +13,7 @@ const Signup = () => {
   const context = useContext(noteContext);
   const { showAlert } = context;
   const domain =
-    process.env.DOMAIN ||
-    "https://inotebook-backend-r4syf0r9l-taruns-projects-2b38c76b.vercel.app";
+    process.env.DOMAIN || "https://inotebook-backend-seven.vercel.app";
   const handleSubmit = async (e) => {
     const { name, email, password } = auth;
     e.preventDefault();

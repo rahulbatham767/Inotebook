@@ -3,8 +3,7 @@ import noteContext from "./NoteContext";
 
 const NoteState = (props) => {
   const host =
-    process.env.DOMAIN ||
-    "https://inotebook-backend-r4syf0r9l-taruns-projects-2b38c76b.vercel.app";
+    process.env.DOMAIN || "https://inotebook-backend-seven.vercel.app";
 
   const notesInitial = [];
   const [notes, setNotes] = useState(notesInitial);
