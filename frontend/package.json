@@ -20,11 +20,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "backend": "/backend/index.js --port -4000",
-    "test": "react-scripts test",
     "deploy": "gh-pages -d build",
-    "eject": "react-scripts eject",
-    "both": "concurrently \"npm run start\" \"npm start backend\""
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [

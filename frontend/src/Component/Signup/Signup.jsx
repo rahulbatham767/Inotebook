@@ -12,21 +12,20 @@ const Signup = () => {
   const navigate = useNavigate();
   const context = useContext(noteContext);
   const { showAlert } = context;
-
+  const domain =
+    process.env.DOMAIN ||
+    "https://inotebook-backend-r4syf0r9l-taruns-projects-2b38c76b.vercel.app";
   const handleSubmit = async (e) => {
     const { name, email, password } = auth;
     e.preventDefault();
 
-    const response = await fetch(
-      `https://inotebook-fxbp.onrender.com/api/auth/createuser`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ name, email, password }),
-      }
-    );
+    const response = await fetch(`${domain}/api/auth/createuser`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name, email, password }),
+    });
     const json = await response.json();
     console.log(json);
     if (json.success) {

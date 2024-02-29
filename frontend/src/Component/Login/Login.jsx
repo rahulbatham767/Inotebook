@@ -7,23 +7,23 @@ const Login = () => {
   let navigate = useNavigate();
   const context = useContext(noteContext);
   const { showAlert } = context;
-
+  const domain =
+    process.env.DOMAIN ||
+    "https://inotebook-backend-r4syf0r9l-taruns-projects-2b38c76b.vercel.app";
+  console.log(process.env.REACT_APP_FOO);
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch(
-      `https://inotebook-fxbp.onrender.com/api/auth/login`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: credential.email,
-          password: credential.password,
-        }),
-      }
-    );
+    const response = await fetch(`${domain}/api/auth/login`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: credential.email,
+        password: credential.password,
+      }),
+    });
     const json = await response.json();
 
     if (json.success) {
